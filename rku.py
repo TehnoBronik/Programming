@@ -7,7 +7,7 @@ if diskr<0:
 elif diskr==0:
     x=-b/(2*a)
     print("odin koren",x)
-else: #
+else:
     x1=(-b+sqrt(diskr))/(2*a)
     x2=(-b-sqrt(diskr))/(2*a)
     print("perviy koren = ", x1," vtoroy koren = ", x2)
