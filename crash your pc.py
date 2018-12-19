@@ -2,7 +2,7 @@ import random
 import string
 random.seed(42)
 s_sq=16
-n=100000
+n=100000000
 n_p=0
 for i in range (n):
     x=random.uniform(0,1000)
