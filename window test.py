@@ -1,7 +1,7 @@
 from random import *
 from tkinter import *
 root = Tk()
-canvas = Canvas(root, width=1920, height=1080)
+canvas = Canvas(root, width=1600, height=1200)
 canvas.pack()
 diapason = 0
 while True:
