@@ -18,7 +18,6 @@ def mytriangule (x_cntr, y_cntr, r):
     canvas.create_line(xb,yb,xc,yc)
     canvas.create_line(xc,yc,xa,ya)
 root = Tk()
-root.wm_state('zoomed')
 canvas = Canvas(root, width=600, height=600)
 canvas.pack()
 canvas.configure(background="black")
