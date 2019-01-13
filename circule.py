@@ -1,8 +1,9 @@
 import math
 from random import *
 from tkinter import *
+import time
 def mycircule(x_cntr, y_cntr, r, color):
-    canvas.create_oval(x_cntr, y_cntr, x_cntr+r, y_cntr+r, fill=color)
+    canvas.create_oval(x_cntr, y_cntr, x_cntr+r, y_cntr+r, outline="white", fill=color)
 def mytriangule (x_cntr, y_cntr, r):
     xb=x_cntr
     yb=y_cntr+r
@@ -17,15 +18,24 @@ def mytriangule (x_cntr, y_cntr, r):
     canvas.create_line(xb,yb,xc,yc)
     canvas.create_line(xc,yc,xa,ya)
 root = Tk()
+root.wm_state('zoomed')
 canvas = Canvas(root, width=600, height=600)
 canvas.pack()
-#diapason = 0
+canvas.configure(background="black")
+
+speed = [1, 1]
+d = 200
+x = 300
+y = 200
+img = PhotoImage(file='wondows.gif')
 while True:
-    colors = choicecolors = choice(['aqua', 'blue', 'fuchsia', 'green', 'maroon', 'orange',
-                  'pink', 'purple', 'red','yellow', 'violet', 'indigo', 'chartreuse', 'lime'])
-    x0 = randint(0, 600)
-    y0 = randint(0, 600)
-    d = randint(0, 600/5)
-    mycircule(x0, y0, d, colors)
-    mytriangule(x0, y0, d)
+    canvas.delete("all")
+    x += speed[0]
+    y += speed[1]
+    canvas.create_image(x, y, image = img, anchor = NW)
     root.update()
+    time.sleep(0.01)
+    if x<0 or x>600-259:
+        speed[0]=-speed[0]
+    if y<0 or y>600-186:
+        speed[1]=-speed[1]
