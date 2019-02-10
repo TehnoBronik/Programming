@@ -31,7 +31,7 @@ def insertionsort(A):
         while j > 0 and A[j] < A[j-1]:
             swap (A, j, j-1)
             j-=1
-            yield A
+            yield A #random shuffle(A)
 
 
 def mergesort(A, start, end):
