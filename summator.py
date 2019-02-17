@@ -1,5 +1,0 @@
-print("Введите число")
-a = int(input())
-print("Введите второе число")
-b = int(input())
-print("Сумма:", a+b)
