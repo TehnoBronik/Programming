@@ -1,3 +1,3 @@
 import matplotlib
-x = x * x
+ = x * x
 show(x)
