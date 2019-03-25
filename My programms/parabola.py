@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 x = np.linspace(-10, 10, 40)
-y = x**2
+y = int(input())
 plt.plot(x, y);
 plt.grid()
 plt.xlabel('x', fontsize=14)

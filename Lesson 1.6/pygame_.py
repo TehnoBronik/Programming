@@ -68,7 +68,6 @@ while True:
         ring.draw()'''
     for ring in rings1:
         ring.update()
-        ring.update1()
         ring.change_color()
         ring.draw()
     time.sleep(0.1)
