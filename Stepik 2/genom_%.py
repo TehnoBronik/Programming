@@ -1,4 +1,5 @@
 c = input()
+c.lower()
 d = c.count("g")
 d1 = c.count("c")
 f = d + d1
