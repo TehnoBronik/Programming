@@ -22,15 +22,16 @@ class Player(pygame.sprite.Sprite):
     def update(self):
         self.acc = vec(0, 0)
         keys = pygame.key.get_pressed()
-        if keys [pygame.K_LEFT] or keys[pygame.K_a]:
+        if keys [pygame.K_LEFT]:
             self.acc.x = -PLAYER_ACC
-        if keys [pygame.K_RIGHT] or keys[pygame.K_d]:
+        if keys [pygame.K_RIGHT]:
             self.acc.x = PLAYER_ACC
 
         self.acc += self.vel * PLAYER_FRICTION
 
         self.vel += self.acc
         self.pos += self.vel + 0.5 * self.acc
+
 
 #perehod za kray ekrana
         if self.pos.x > WIDTH:
