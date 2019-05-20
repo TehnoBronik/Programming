@@ -1,8 +1,14 @@
 import random
-def mix(word):
-    nw = word[1:-1]
-    nw.shuffle()
-    return
+def mix(words):
+    if len(words) > 1:
+        nw = words[1:-1]
+        shuffled = list(nw)
+        random.shuffle(shuffled)
+        shuffled = ''.join(shuffled)
+        out = words[0] + shuffled + words[-1]
+    else:
+        out = words
+    return out
 
 data = []
 in_file = open("txt.txt", "r", encoding='utf-8')
@@ -13,7 +19,6 @@ in_file.close()
 out_data = []
 for line in data:
     words = line.split()
-    print(words)
     for i in range(0, len(words)):
         words[i] = mix(words[i])
     out_data.append(" ".join(words))

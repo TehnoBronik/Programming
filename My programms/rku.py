@@ -6,8 +6,10 @@ if diskr<0:
     print("korney net")
 elif diskr==0:
     x=-b/(2*a)
+    print("D =" ,diskr)
     print("odin koren",x)
 else:
     x1=(-b+sqrt(diskr))/(2*a)
     x2=(-b-sqrt(diskr))/(2*a)
+    print("D =" ,diskr)
     print("perviy koren = ", x1," vtoroy koren = ", x2)
